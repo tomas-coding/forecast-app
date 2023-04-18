@@ -3,7 +3,8 @@ const WeatherMainInfo = ({weather}) => {
     return ( <div>
         <div className='info-container'>
         <div><h2>City: {weather?.location.name}</h2>
-        <h2>Country: {weather?.location.country}</h2></div>
+        <h2>Country: {weather?.location.country}</h2>
+        <h2>Temperature: {weather?.current.temp_c}°C</h2></div>
         
         <div><img src={`http:${weather?.current.condition.icon}`} width="128" alt={weather?.current.condition.text} /></div>
         </div>
